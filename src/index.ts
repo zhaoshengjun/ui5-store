@@ -1,11 +1,11 @@
-import { Action, Reducer, State, Listener } from "./interfaces";
+import { Action, Reducer, Listener } from "./interfaces";
 
 class Store {
-  private _reducer: Reducer;
-  private _state: State;
+  private _reducer: Reducer<any>;
+  private _state: any;
   private _listeners: Array<Listener>;
 
-  constructor(reducer: Reducer, initState: State = {}) {
+  constructor(reducer: Reducer<any>, initState: any = {}) {
     this._reducer = reducer;
     this._state = initState;
     this._listeners = [];

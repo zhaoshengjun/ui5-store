@@ -1,8 +1,10 @@
+// type is mandatory, payload is optional
 export interface Action {
   type: string;
-  payload: any;
+  payload?: any;
 }
 
-export type State = any;
-export type Reducer = (state: State, action: Action) => State;
+//takes a type, return the same type
+export type Reducer<T> = (state: T, action: Action) => T;
+
 export type Listener = Function;
