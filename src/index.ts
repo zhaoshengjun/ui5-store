@@ -11,10 +11,6 @@ class Store {
     this._listeners = [];
   }
 
-  getState() {
-    return this._state;
-  }
-
   dispatch(action: Action) {
     this._state = this._reducer(this._state, action);
     // after state changed, call each listener
