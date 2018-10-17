@@ -15,7 +15,7 @@ class Store {
     this._state = this._reducer(this._state, action);
     // after state changed, call each listener
     for (let listener of this._listeners) {
-      listener();
+      listener(this._state);
     }
   }
 
