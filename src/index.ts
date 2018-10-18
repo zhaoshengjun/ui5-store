@@ -5,7 +5,7 @@ export class Store {
   private _state: any;
   private _listeners: Array<Listener>;
 
-  constructor(reducer: Reducer<any>, initState: any = {}) {
+  constructor(reducer: Reducer<any>, initState?: any) {
     this._reducer = reducer;
     this._state = initState;
     this._listeners = [];
