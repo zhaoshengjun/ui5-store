@@ -1,6 +1,6 @@
 import { Action, Reducer, Listener } from "./interfaces";
 
-class Store {
+export class Store {
   private _reducer: Reducer<any>;
   private _state: any;
   private _listeners: Array<Listener>;
